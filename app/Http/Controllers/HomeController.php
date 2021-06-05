@@ -33,13 +33,6 @@ class HomeController extends Controller
         return view('home', compact('followings', 'posts'));
     }
 
-    private function fetchFollowers()
-    {
-        $guestUser = Auth::user();
-
-        return $guestUser->followers;
-    }
-
     private function fetchFollowings()
     {
         $guestUser = Auth::user();

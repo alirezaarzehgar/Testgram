@@ -1937,6 +1937,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['followings'],
   created: function created() {
@@ -6908,7 +6910,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.profile[data-v-490e081a] {\n    width: 60px;\n    height: 60px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.profile[data-v-490e081a] {\n        width: 60px;\n        height: 60px;\n}\n\n/* The heart of the matter */\n.testimonial-group > .row[data-v-490e081a] {\n  display: block;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n.testimonial-group > .row > .col-1[data-v-490e081a] {\n  display: inline-block;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7028,7 +7030,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#result[data-v-e37c7704] {\n    position: absolute;\n    z-index: 1;\n\n    max-height: 500px;\n    width: 400px;\n\n    overflow-y: auto;\n    overflow-x: hidden;\n\n    background-color: #fff;\n\n    display: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#result[data-v-e37c7704] {\n    position: absolute;\n    z-index: 1;\n\n    max-height: 250px;\n    width: 400px;\n\n    overflow-y: auto;\n    overflow-x: hidden;\n\n    background-color: #fff;\n\n    display: none;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39989,35 +39991,46 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "row d-flex flex-row overflow-auto" },
-    _vm._l(_vm.profiles, function(profile, index) {
-      return _c(
-        "div",
-        {
-          key: index,
-          attrs: { dir: "col" },
-          on: {
-            click: function($event) {
-              return _vm.gotoAccount(profile.username)
+  return _c("div", { staticClass: "container testimonial-group" }, [
+    _c(
+      "div",
+      { staticClass: "row text-center" },
+      _vm._l(_vm.profiles, function(profile, index) {
+        return _c(
+          "div",
+          {
+            key: index,
+            staticClass: "col-1",
+            on: {
+              click: function($event) {
+                return _vm.gotoAccount(profile.username)
+              }
             }
-          }
-        },
-        [
-          _c("img", {
-            staticClass: "mx-2 profile",
-            attrs: { alt: "not found", src: profile.url }
-          }),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-center" }, [
-            _vm._v(_vm._s(profile.username))
-          ])
-        ]
-      )
-    }),
-    0
-  )
+          },
+          [
+            _c("img", {
+              staticClass: "mx-2 profile",
+              attrs: { alt: "not found", src: profile.url }
+            }),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticClass: "text-center",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "top",
+                  title: profile.username
+                }
+              },
+              [_vm._v(_vm._s(profile.username.substring(0, 10)))]
+            )
+          ]
+        )
+      }),
+      0
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -40,7 +40,7 @@ export default {
         position: absolute;
         z-index: 1;
 
-        max-height: 500px;
+        max-height: 250px;
         width: 400px;
 
         overflow-y: auto;

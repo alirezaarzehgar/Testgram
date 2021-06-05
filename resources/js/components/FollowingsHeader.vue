@@ -1,9 +1,11 @@
 <template>
-    <div class="row d-flex flex-row overflow-auto">
-        <div dir="col"  v-for="(profile, index) in profiles" :key="index" @click="gotoAccount(profile.username)">
-            <img class="mx-2 profile" alt="not found" :src="profile.url">
+    <div class="container testimonial-group">
+        <div class="row text-center">
+            <div class="col-1"  v-for="(profile, index) in profiles" :key="index" @click="gotoAccount(profile.username)">
+                <img class="mx-2 profile" alt="not found" :src="profile.url">
 
-            <p class="text-center">{{profile.username}}</p>
+                <p class="text-center" data-toggle="tooltip" data-placement="top" :title="profile.username">{{profile.username.substring(0, 10)}}</p>
+            </div>
         </div>
     </div>
 </template>
@@ -38,4 +40,16 @@ export default {
         width: 60px;
         height: 60px;
     }
+
+/* The heart of the matter */
+.testimonial-group > .row {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.testimonial-group > .row > .col-1 {
+  display: inline-block;
+}
+
 </style>
