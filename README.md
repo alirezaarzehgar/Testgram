@@ -61,4 +61,4 @@ DB_PASSWORD=secret
 Thank you for considering contributing to the Testgram app!
 
 ## License
-[here](Testgram/LICENSE)
+[here](LICENSE)
