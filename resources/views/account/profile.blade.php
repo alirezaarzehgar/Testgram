@@ -4,7 +4,7 @@
     <div class="container profile-main">
         <div class="row">
             <div class="profile-left-side">
-                <img class="profile-medium" src="{{$user->profile->image->path()}}" alt="">
+                <img class="profile-medium" src="{{$user->profile->image?->path()}}" alt="">
             </div>
 
             <div class="col-4">
