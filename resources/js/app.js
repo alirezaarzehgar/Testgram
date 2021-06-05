@@ -29,6 +29,7 @@ Vue.component('v-follower-modal', require('./components/FollowersModal').default
 Vue.component('v-following-modal', require('./components/FollowingsModal').default);
 Vue.component('v-member', require('./components/Member').default);
 Vue.component('v-followings-header', require('./components/FollowingsHeader').default);
+Vue.component('v-user-search', require('./components/UserSearch').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -1,11 +1,11 @@
 <template>
     <div class="container-fluid mx-2">
         <div class="row-cols-5 d-flex align-items-center">
-            <div>
+            <div class=" mx-2">
                 <img class="image" :src="image" alt="not found">
             </div>
 
-            <div>
+            <div class="mx-2">
                 <a class="link" :href="link">{{profile.username}}</a>
             </div>
         </div>
