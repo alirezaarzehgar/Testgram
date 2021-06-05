@@ -8,10 +8,57 @@ website like
 
 ## Using Testgram
 
+### Updating composer
+```
+composer update
+```
 
+### Create database
+
+```
+CREATE DATABASE MyDB
+```
+
+### Create .env file
+
+```
+cp .env.example .env
+vim .env
+```
+
+update:
+
+```
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=MyDB
+DB_USERNAME=username
+DB_PASSWORD=secret
+```
+
+### Migrations
+```
+./artisan migrate
+```
+
+### Generating app key
+```
+./artisan key:generate
+```
+
+### Create storage link
+```
+./artisan storage:link
+```
+
+### Serve application
+```
+./artisan serve
+```
 
 ## Contributing
 
 Thank you for considering contributing to the Testgram app!
 
 ## License
+[here](Testgram/LICENSE)
