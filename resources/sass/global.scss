@@ -1,0 +1,37 @@
+.btn-link {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif !important;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.card-profile {
+    width: 800px;
+}
+
+.text-info {
+    color: #8e8e8e !important;
+    font-size: 12px;
+}
+
+.profile-main {
+    margin-left: 500px;
+
+    width:1000px !important;
+
+    .profile-left-side {
+        margin-right: 150px;
+    }
+}
